@@ -1,89 +1,31 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <script src="../repo-pixels.js?v=20261010-1"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="最高可選 100 萬，只填三項基本資料即可送出資金需求。">
-  <meta name="theme-color" content="#edf6f1">
-  <title>選好金額，立即送出資金需求</title>
-  <link rel="stylesheet" href="../styles.css?v=2026072801">
-  <script src="../app.js?v=repo-fb-20261010-1" defer></script>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="description" content="線上試算每月還款，選擇需求金額後填寫資料。試算僅供參考。">
+ <meta name="theme-color" content="#eaf3fd" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0d1b33" media="(prefers-color-scheme: dark)"><title>選好金額，立即送出資金需求</title>
+ <link rel="stylesheet" href="base.css?v=20261108-1"><link rel="stylesheet" href="notice.css?v=20261108-1"><link rel="stylesheet" href="ice.css?v=20261108-1"><link rel="stylesheet" href="optical-blue.css?v=20261108-1"><link rel="stylesheet" href="optical-f.css?v=20261108-1">
+ <script src="../repo-pixels.js?v=20261010-1"></script><script src="../app.js?v=repo-fb-20261010-1" defer></script><script src="optical-f.js?v=20261108-1" defer></script>
 </head>
-<body data-page="amount">
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="wordmark" href="index.html" aria-label="返回金額選擇頁">
-        <span class="wordmark-mark" aria-hidden="true">額</span>
-        <span>線上額度評估</span>
-      </a>
-      <span class="header-note">只填 3 項資料</span>
-    </div>
-  </header>
-
-  <main class="amount-main">
-    <section class="amount-shell" aria-labelledby="amount-title">
-      <div class="flow-nav" aria-label="申請流程">
-        <span class="flow-item current">選擇金額</span>
-        <span class="flow-line" aria-hidden="true"></span>
-        <span class="flow-item">填寫資料</span>
-      </div>
-
-      <div class="amount-hero">
-        <div class="amount-intro">
-          <p class="eyebrow">最高可選 100 萬</p>
-          <h1 id="amount-title">想借多少<br><strong>先自己選</strong></h1>
-          <p>只填姓名、年齡和警示戶狀態，符合條件即可送出需求。</p>
-        </div>
-        <div class="limit-visual" aria-label="最高資金需求一百萬">
-          <span>資金需求上限</span>
-          <div><strong>100</strong><b>萬</b></div>
-          <p>高額需求也能登記</p>
-        </div>
-      </div>
-
-      <div class="amount-grid" id="amount-options" aria-label="選擇需求金額">
-        <button class="amount-option" type="button" data-amount="10萬-20萬" aria-pressed="false">
-          <small>靈活週轉</small>
-          <span class="amount-number">10<span>萬</span> - 20<span>萬</span></span>
-        </button>
-        <button class="amount-option" type="button" data-amount="20萬-30萬" aria-pressed="false">
-          <small>資金補足</small>
-          <span class="amount-number">20<span>萬</span> - 30<span>萬</span></span>
-        </button>
-        <button class="amount-option" type="button" data-amount="30萬-50萬" aria-pressed="false">
-          <small>高額需求</small>
-          <span class="amount-number">30<span>萬</span> - 50<span>萬</span></span>
-        </button>
-        <button class="amount-option featured" type="button" data-amount="50萬-100萬" aria-pressed="false">
-          <span class="featured-label">最高可選</span>
-          <small>百萬內需求</small>
-          <span class="amount-number">50<span>萬</span> - 100<span>萬</span></span>
-        </button>
-      </div>
-
-      <div class="selection-bar">
-        <div class="selection-message" id="selection-message" aria-live="polite">
-          <span>尚未選擇金額</span>
-          <strong>選一個額度開始</strong>
-        </div>
-        <button class="primary-button amount-continue" id="amount-continue" type="button" disabled>
-          選好金額後繼續
-        </button>
-      </div>
-
-      <div class="trust-list" aria-label="申請說明">
-        <span><b aria-hidden="true">✓</b> 只填 3 項資料</span>
-        <span><b aria-hidden="true">✓</b> 僅限非警示戶申請</span>
-        <span><b aria-hidden="true">✓</b> 不需手機驗證</span>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>本頁僅供資金需求登記，不代表核准、利率或撥款承諾，實際結果依個別條件確認。</p>
-  </footer>
-
+<body data-page="amount"><main class="app">
+ <header class="intro-module"><img class="optical-hero-image" src="optical-blue-hero.webp" width="1040" height="400" fetchpriority="high" alt=""><span class="company-name">線上額度評估</span><div class="top"><h1>快速額度試算<span>急用周轉首選</span></h1></div><p>需求金額最高可選 <strong>NT$1,000,000</strong></p></header>
+ <section id="calculator" class="screen">
+  <div class="calculator-panel">
+   <div class="amount"><label for="amount">申請金額</label><strong id="amount-value">NT$ 100,000</strong><input id="amount" type="range" min="100000" max="1000000" step="10000" value="100000"><div class="limits"><span>NT$ 100,000</span><span>NT$ 1,000,000</span></div></div>
+   <div class="term-section"><h2>還款期數</h2><div class="terms choices"><button type="button" data-term="24">24期</button><button type="button" data-term="36">36期</button><button type="button" data-term="60" class="selected" aria-pressed="true">60期</button><button type="button" data-term="84">84期</button><button type="button" data-term="120">120期</button><button type="button" data-term="144">144期</button><button type="button" data-term="180">180期</button><button type="button" data-term="240">240期</button><button type="button" data-term="300">300期</button><button type="button" data-term="360">360期</button></div></div>
+   <details class="purpose-section"><summary><span>貸款用途</span><strong id="purpose-value">日常資金調度</strong><b aria-hidden="true">⌄</b></summary><div class="purposes choices"><button type="button" class="selected" aria-pressed="true">日常資金調度</button><button type="button">整合既有貸款</button><button type="button">自營生意備款</button><button type="button">家庭臨時支出</button><button type="button">設備工具添購</button><button type="button">其他資金安排</button></div></details>
+   <div class="result"><div class="result-title">試算結果（僅供參考）</div><div class="payment-row"><div><p>每月應還</p><strong id="payment">NT$ 1,775</strong></div><div class="rate-block"><span>試算年利率</span><b id="rate">2.5%</b></div></div><details class="cost-details"><summary>查看試算明細<span aria-hidden="true">›</span></summary><div class="metrics"><div><span>總利息</span><b id="interest"></b></div><div><span>總還款</span><b id="total"></b></div></div></details></div>
+  </div>
+  <div class="apply-dock">
+   <div class="optical-activity-slot"><aside class="application-notice is-visible" aria-label="申請流程"><span class="optical-activity-label">申請流程</span><span class="optical-activity-copy"><strong>先試算，再填寫資料</strong><span class="capsule-status">僅受理非警示戶申請</span></span><strong class="notice-amount" id="f-band-label">10萬-20萬</strong></aside></div>
+   <button class="primary" id="apply" type="button" disabled>立即申請貸款 <span class="optical-arrow" aria-hidden="true">→</span></button>
+  </div>
+  <p class="disclaimer">利率與期數為試算假設。實際額度、利率、期數及結果依個別評估為準。</p>
+  <!-- Kept for the existing F amount controller, including its ad attribution and session handling. -->
+  <div hidden>
+   <button class="amount-option" type="button" data-amount="10萬-20萬" aria-pressed="false"></button><button class="amount-option" type="button" data-amount="20萬-30萬" aria-pressed="false"></button><button class="amount-option" type="button" data-amount="30萬-50萬" aria-pressed="false"></button><button class="amount-option" type="button" data-amount="50萬-100萬" aria-pressed="false"></button>
+   <div id="selection-message"></div><button id="amount-continue" type="button" disabled></button>
+  </div>
   <noscript>請開啟 JavaScript 後使用線上申請功能。</noscript>
-</body>
-</html>
+ </section>
+</main></body></html>
